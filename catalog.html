@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Каталог</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <a class="main-logo" href="index.html">
+      <img src="img/logo.svg" width="160" height="65" alt="Логотип студии Нёрдс">
+    </a>
+    <nav class="main-navigation">
+      <ul class="site-navigation">
+        <li class="item"><a href="studio.html">Студия</a></li>
+        <li class="item"><a href="clients.html">Клиенты</a></li>
+        <li class="item"><a href="shop.html">Магазин</a></li>
+        <li class="item"><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <ul class="user-navigation">
+        <li class="item">Корзина</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="main-title">Магазин готовых шаблонов</h1>
+
+    <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+      <!-- Здесь будет форма -->
+    </form>
+
+    <div class="sort">
+      <h2 class="title">Сортировать:</h2>
+      <ul class="sort-list">
+        <li class="item item-current">По цене</li>
+        <li class="item">По типу</li>
+        <li class="item">По названию</li>
+      </ul>
+      <div class="changer">
+        <span class="visually-hidden changer-down">Сортировка по возрастанию</span>
+        <span class="visually-hidden changer-up">Сортировка по убыванию</span>
+      </div>
+    </div>
+
+    <section class="catalog">
+      <h2 class="visually-hidden">Каталог товаров</h2>
+      <ul class="catalog-list">
+        <li class="item">
+          <img class="catalog-cart" src="img/sedona.jpg" alt="Изображение главной страницы сайта Седона">
+          <div class="popup">
+            <h3 class="title"><a href="#">Sedona</a></h3>
+            <p class="description">Информационный сайт<br> для туристов</p>
+            <a class="button" href="sites.html">9 900 руб.</a>
+          </div>
+        </li>
+        <li class="item">
+          <img class="catalog-cart" src="img/pink.jpg" alt="Изображение главной страницы сайта Пинк">
+          <div class="popup">
+            <h3 class="title"><a href="apps.html">Pink App</a></h3>
+            <p class="description">Продуктовый лендинг<br> приложения для iOS и Android</p>
+            <a class="button" href="apps.html">9 900 руб.</a>
+          </div>
+        </li>
+        <li class="item">
+          <img class="catalog-cart" src="img/barbershop-borodinski.jpg" alt="Изображение главной страницы сайта Барбешоп «Бородинский»">
+          <div class="popup">
+            <h3 class="title"><a href="sites.html">Barbershop</a></h3>
+            <p class="description">Сайт салона красоты.<br> Для мужчин, да.</p>
+            <a class="button" href="sites.html">9 900 руб.</a>
+          </div>
+        </li>
+        <li class="item">
+          <img class="catalog-cart" src="img/mishka.jpg" alt="Изображение главной страницы сайта Мишка">
+          <div class="popup">
+            <h3 class="title"><a href="sites.html">Mishka</a></h3>
+            <p class="description">Интернет-магазин<br> вязаных игрушек</p>
+            <a class="button" href="sites.html">9 900 руб.</a>
+          </div>
+        </li>
+        <li class="item">
+          <img class="catalog-cart" src="img/A-plus.jpg" alt="Изображение главной страницы сайта A-plus">
+          <div class="popup">
+            <h3 class="title"><a href="sites.html">A Plus</a></h3>
+            <p class="description">Лендинг курсов повышения<br> квалификации</p>
+            <a class="button" href="sites.html">9 900 руб.</a>
+          </div>
+        </li>
+        <li class="item">
+          <img class="catalog-cart" src="img/kvast.jpg" alt="Изображение главной страницы сайта Кваст">
+          <div class="popup">
+            <h3 class="title"><a href="sites.html">Кваст</a></h3>
+            <p class="description">Промо-сайт производителя<br> крафтового кваса</p>
+            <a class="button" href="sites.html">9 900 руб.</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="pagination">
+      <h2 class="visually-hidden">Переключение страниц</h2>
+      <ul class="pagination-list">
+        <li class="item"><a class="page-number current-page"><span class="visually-hidden">Первая страница</span></a></li>
+        <li class="item"><a class="page-number" href="page2.html"><span class="visually-hidden">Вторая страница</span></a></li>
+        <li class="item"><a class="page-number" href="page3.html"><span class="visually-hidden">Третья страница</span></a></li>
+      </ul>
+      <a class="next-page button" href="page2.html">Следующая</a>
+    </section>
+  </main>
+
+<footer class="main-footer">
+    <section class="contacts">
+      <h2 class="visually-hidden">Наши контакты</h2>
+      <div class="contacts-info">
+        <h3 class="title">Nёrds design studio</h3>
+        <p class="adress">191186, Санкт-Петербург,<br>
+        ул. Б. Конюшенная, д. 19/8</p>
+        <p class="phone">тел. +7(812)275-75-75</p>
+        <a class="button" href="write-us.html">Напишите нам</a>
+      </div>
+      <img src="img/map.png" width="1440" height="415" alt="Мы на карте">
+    </section>
+
+    <div class="footer-bottom">
+      <ul class="social-list">
+        <li>
+          <a class="social-button social-vk" href="#vk">
+            <span class="visually-hidden">ВКонтакте</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-button social-fb" href="#fb">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-button social-insta" href="#instagramm">
+            <span class="visually-hidden">Инстаграмм</span>
+          </a>
+        </li>
+      </ul>
+      <div class="bonus">
+        <p class="title">Давайте дружить, это выгодно!</p>
+        <p class="description">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </div>
+  </footer>
+  <section class="modal">
+    <h2 class="title">Напишите нам</h2>
+    <!-- Здесь будет форма -->
+    <button type="button" name="button">Закрыть попап</button>
+  </section>
+  <script src="js/file.js"></script>
+</body>
+</html>
