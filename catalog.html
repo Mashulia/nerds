@@ -18,7 +18,9 @@
         <li class="item"><a href="contacts.html">Контакты</a></li>
       </ul>
       <ul class="user-navigation">
-        <li class="item">Корзина</li>
+        <li class="item">
+          <a href="cart.html">Корзина</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -26,32 +28,92 @@
   <main>
     <h1 class="main-title">Магазин готовых шаблонов</h1>
 
-    <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-      <!-- Здесь будет форма -->
-    </form>
+    <section class="filter">
+      <h2 class="visually-hidden">Фильтр шаблонов</h2>
+      <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+        <div class="value">
+          <h3 class="filter-title">Стоимость:</h3>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
+        <div class="price-controls">
+          <label class="min-price" for="min-price">от</label>
+          <input id="min-price" type="text" name="min-price" placeholder="0">
+          <label class="max-price" for="max-price">до</label>
+          <input id="max-price" type="text" name="max-price" placeholder="15 000">
+        </div>
+        <fieldset class="layot">
+          <legend class="filter-title">Сетка:</legend>
+          <ul class="filter-list">
+            <li class="item">
+              <input class="visually-hidden filter-input radio-input" id="adaptive-layout" type="radio" name="layout-group" value="adaptive" checked>
+              <label for="adaptive-layout">Адаптивная</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input radio-input" id="fix-layout" type="radio" name="layout-group" value="fix">
+              <label for="fix-layout">Фиксированная</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input radio-input" id="rubbery-layout" type="radio" name="layout-group" value="rubbery">
+              <label for="rubbery-layout">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="features">
+          <legend class="filter-title">Особенности:</legend>
+          <ul class="filter-list">
+            <li class="item">
+              <input class="visually-hidden filter-input checkbox-input" id="slider" type="checkbox" name="slider" checked>
+              <label for="slider">Слайдер</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input checkbox-input" id="features-block" type="checkbox" name="features-block">
+              <label for="features-block">Блок преимуществ</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input checkbox-input" id="news" type="checkbox" name="news" checked>
+              <label for="news">Новости</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input checkbox-input" id="gallery" type="checkbox" name="gallery">
+              <label for="gallery">Галерея</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input checkbox-input" id="cart" type="checkbox" name="cart">
+              <label for="cart">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button" type="submit">Показать</button>
+      </form>
+    </section>
 
-    <div class="sort">
-      <h2 class="title">Сортировать:</h2>
+    <section class="sort">
+      <h3 class="filter-title">Сортировать:</h2>
       <ul class="sort-list">
-        <li class="item item-current">По цене</li>
-        <li class="item">По типу</li>
-        <li class="item">По названию</li>
+        <li class="item item-current"><a>По цене</a></li>
+        <li class="item"><a href="type.html">По типу</a></li>
+        <li class="item"><a href="name.html">По названию</a></li>
       </ul>
       <div class="changer">
-        <span class="visually-hidden changer-down">Сортировка по возрастанию</span>
-        <span class="visually-hidden changer-up">Сортировка по убыванию</span>
+        <button class="visually-hidden changer-down" type="button">Сортировка по возрастанию</button>
+        <button class="visually-hidden changer-up" type="button">Сортировка по убыванию</button>
       </div>
-    </div>
+    </section>
 
     <section class="catalog">
-      <h2 class="visually-hidden">Каталог товаров</h2>
+      <h2 class="visually-hidden">Каталог шаблонов</h2>
       <ul class="catalog-list">
         <li class="item">
           <img class="catalog-cart" src="img/sedona.jpg" alt="Изображение главной страницы сайта Седона">
           <div class="popup">
-            <h3 class="title"><a href="#">Sedona</a></h3>
+            <h3 class="title"><a href="sites.html">Sedona</a></h3>
             <p class="description">Информационный сайт<br> для туристов</p>
-            <a class="button" href="#">9 900 руб.</a>
+            <a class="button">9 900 руб.</a>
           </div>
         </li>
         <li class="item">
@@ -59,7 +121,7 @@
           <div class="popup">
             <h3 class="title"><a href="apps.html">Pink App</a></h3>
             <p class="description">Продуктовый лендинг<br> приложения для iOS и Android</p>
-            <a class="button" href="#">9 900 руб.</a>
+            <span class="button">9 900 руб.</span>
           </div>
         </li>
         <li class="item">
@@ -67,7 +129,7 @@
           <div class="popup">
             <h3 class="title"><a href="sites.html">Barbershop</a></h3>
             <p class="description">Сайт салона красоты.<br> Для мужчин, да.</p>
-            <a class="button" href="#">9 900 руб.</a>
+            <span class="button">9 900 руб.</span>
           </div>
         </li>
         <li class="item">
@@ -75,7 +137,7 @@
           <div class="popup">
             <h3 class="title"><a href="sites.html">Mishka</a></h3>
             <p class="description">Интернет-магазин<br> вязаных игрушек</p>
-            <a class="button" href="#">9 900 руб.</a>
+            <span class="button">9 900 руб.</span>
           </div>
         </li>
         <li class="item">
@@ -83,7 +145,7 @@
           <div class="popup">
             <h3 class="title"><a href="sites.html">A Plus</a></h3>
             <p class="description">Лендинг курсов повышения<br> квалификации</p>
-            <a class="button" href="#">9 900 руб.</a>
+            <span class="button">9 900 руб.</span>
           </div>
         </li>
         <li class="item">
@@ -91,7 +153,7 @@
           <div class="popup">
             <h3 class="title"><a href="sites.html">Кваст</a></h3>
             <p class="description">Промо-сайт производителя<br> крафтового кваса</p>
-            <a class="button" href="#">9 900 руб.</a>
+            <span class="button">9 900 руб.</span>
           </div>
         </li>
       </ul>
@@ -145,11 +207,29 @@
       </div>
     </div>
   </footer>
+
   <section class="modal">
     <h2 class="title">Напишите нам</h2>
-    <!-- Здесь будет форма -->
-    <button class="modal-close" type="button">Закрыть попап</button>
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="modal-group">
+        <div class="modal-item">
+          <label for="modal-name">Ваше имя:</label>
+          <input id="modal-name" type="text" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="modal-item">
+          <label for="modal-email">Ваш e-mail:</label>
+          <input id="modal-email" type="email" name="email" placeholder="email@example.com">
+        </div>
+      </div>
+      <div class="modal-item">
+        <label for="modal-text">Текст письма:</label>
+        <textarea id="modal-text" name="text" placeholder="В свободной форме"></textarea>
+      </div>
+      <button class="button" type="submit">Отправить</button>
+    </form>
+    <button type="button">Закрыть попап</button>
   </section>
+
   <script src="js/file.js"></script>
 </body>
 </html>
