@@ -1,0 +1,344 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283136;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font: inherit;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: #fb565a;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:hover,
+.buton:focus {
+  background-color: #e74246;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d7373b;
+}
+
+.main-header {
+  background-color: #eeeeee;
+}
+
+.main-navigation {
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.main-navigation a {
+  color: #000000;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+  color: #fb565a;
+}
+
+.main-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation .item-current,
+.user-navigation .item-current {
+  color: #000000;
+  border-bottom: 2px solid #fb565a;
+}
+
+.sliders {
+  background-color: #eeeeee;
+}
+
+.sliders-list,
+.switch-list {
+  list-style: none;
+}
+
+.sliders-list .title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.offers,
+.about-us,
+.clients {
+  border-bottom: 2px solid #eeeeee;
+}
+
+.offers-list {
+  list-style: none;
+}
+
+.offers-list .title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.button-app {
+  background-color: #00ca74;
+}
+
+.button-app:hover,
+.buton-app:focus {
+  background-color: #00bc6c;
+}
+
+.button-app:active {
+  background-color: #00aa62;
+}
+
+.button-presentation {
+  background-color: #efc84a;
+}
+
+.button-presentation:hover,
+.buton-presentation:focus {
+  background-color: #eab534;
+}
+
+.button-presentation:active {
+  background-color: #e5a722;
+}
+
+.lead {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.list-title {
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.about-us-list {
+  list-style: none;
+}
+
+.slogan {
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.percent td {
+  font-size: 45px;
+  line-height: 10.06px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.value td {
+  line-height: 18px;
+}
+
+.clients-list {
+  list-style: none;
+}
+
+.contacts .title {
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.adress,
+.phone {
+  line-height: 18px;
+}
+
+.social-list {
+  list-style: none;
+}
+
+.bonus .title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.bonus .description {
+  line-height: 22px;
+}
+
+.modal .title {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.modal label {
+  line-height: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.modal input,
+.modal textarea {
+  font: inherit;
+  background-color: transparent;
+  border: 2px solid #d7dcde;
+  color: #444444;
+  opacity: 0.5;
+}
+
+.modal input:hover,
+.modal textarea:hover {
+  border-color: #b4b9bb;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  opacity: 1;
+  border-color: #000000;
+}
+
+.modal input:invalid,
+.modal textarea:invalid {
+  color: #e74246;
+  border-color: #e74246;
+}
+
+.main-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.price-controls label,
+.price-controls input {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  color: #283136;
+  background-color: #eeeeee;
+}
+
+.filter-title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.layot,
+.features {
+  border: none;
+}
+
+.filter-list {
+  list-style: none;
+}
+
+.filter-list label {
+  line-height: 20px;
+}
+
+.filter-form .button {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.filter-form .button:hover,
+.filter-form .button:focus {
+  background-color: #dfdfdf;
+}
+
+.filter-form .button:active {
+  background-color: #d5d5d5;
+  box-shadow: inset 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.sort-list {
+  font-size: 14px;
+  line-height: 18px;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.sort-list a {
+  font: inherit;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-list a:not(.item-current a):hover,
+.sort-list a:not(.item-current a):focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-list a:not(.item-current a):active {
+  color: #000000;
+}
+
+.item-current a {
+  color: #000000;
+}
+
+.popup .title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.popup a {
+  font: inherit;
+  color: inherit;
+}
+
+.popup .description {
+  line-height: 18px;
+}
