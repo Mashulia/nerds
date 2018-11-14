@@ -1,3 +1,9 @@
+/* Обводка */
+* {
+    outline: 2px solid lightblue;
+}
+/* Обводка */
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -8,6 +14,11 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
+}
+html,
+body {
+  min-width: 1200px;
+  min-height: 2476px;
 }
 
 body {
@@ -49,6 +60,9 @@ a {
 }
 
 .main-header {
+  display: flex;
+  /* временно для сетки */
+  min-height:
   background-color: #eeeeee;
 }
 
@@ -61,6 +75,8 @@ a {
 
 .site-navigation,
 .user-navigation {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
