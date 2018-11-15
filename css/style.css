@@ -17,7 +17,7 @@ html {
 }
 html,
 body {
-  min-width: 1200px;
+  min-width: 1440px;
   min-height: 2476px;
 }
 
@@ -37,6 +37,7 @@ a {
 }
 
 .button {
+  display: block;
   font: inherit;
   font-weight: 500;
   line-height: 18px;
@@ -61,16 +62,29 @@ a {
 
 .main-header {
   display: flex;
-  /* временно для сетки */
-  min-height:
+  margin-bottom: 30px;
+  justify-content: space-between;
   background-color: #eeeeee;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .main-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
   line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
   color: #000000;
+}
+
+.main-logo {
+  width: 160px;
+  height: 65px;
 }
 
 .site-navigation,
@@ -78,6 +92,14 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.site-navigation {
+  width: 440px;
+}
+
+.user-navigation {
+  width: 160px;
 }
 
 .main-navigation a {
@@ -100,19 +122,43 @@ a {
 }
 
 .sliders {
+  margin-bottom: 80px;
   background-color: #eeeeee;
 }
 
 .sliders-list,
 .switch-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.sliders-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.sliders-list .item {
+  width: 1160px;
+  flex-shrink: 0;
+}
+
 .sliders-list .title {
+  margin: 0;
+  margin-bottom: 25px;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
+}
+
+.sliders-list .description {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.sliders .button  {
+  margin-bottom: 80px;
 }
 
 .offers,
@@ -121,16 +167,40 @@ a {
   border-bottom: 2px solid #eeeeee;
 }
 
+.offers {
+  margin-bottom: 75px;
+}
+
 .offers-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.offers-list .item {
+  width: 300px;
+}
+
 .offers-list .title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-top: 170px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.offers-list .description {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.offers .button {
+  margin-bottom: 80px;
 }
 
 .button-app {
@@ -159,24 +229,56 @@ a {
   background-color: #e5a722;
 }
 
+.about-us {
+  margin-bottom: 45px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-column {
+  width: 660px;
+}
+
+.right-column {
+  width: 360px;
+}
+
 .lead {
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
   color: #000000;
 }
 
+.about-us .description {
+  margin: 0;
+  margin-bottom: 45px;
+}
+
 .list-title {
+  margin: 0;
+  margin-bottom: 30px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
 }
 
 .about-us-list {
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0;
   list-style: none;
 }
 
 .slogan {
+  margin: 0;
+  margin-bottom: 45px;
+  padding-top: 205px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
@@ -184,9 +286,13 @@ a {
 
 .percent td {
   font-size: 45px;
-  line-height: 10.06px;
+  line-height: 10px;
   font-weight: 700;
   color: #000000;
+}
+
+.percent sup {
+  margin-top: 10px;
 }
 
 .value td {
@@ -194,10 +300,55 @@ a {
 }
 
 .clients-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
   list-style: none;
 }
 
+.clients-list .item {
+  width: 230px;
+}
+
+.clients-list img {
+  vertical-align: middle;
+}
+
+.logo-1 {
+  width: 199px;
+  height: 68px;
+}
+
+.logo-2 {
+  width: 209px;
+  height: 90px;
+}
+
+.logo-3 {
+  width: 185px;
+  height: 52px;
+}
+
+.logo-4 {
+  width: 173px;
+  height: 84px;
+}
+
+.main-footer {
+  margin-top: 80px;
+}
+
+.contacts-info {
+  padding: 50px;
+  width: 320px;
+}
+
 .contacts .title {
+  margin: 0;
+  margin-bottom: 25px;
   line-height: 30px;
   font-weight: 700;
   color: #000000;
@@ -206,14 +357,43 @@ a {
 
 .adress,
 .phone {
+  margin: 0;
   line-height: 18px;
 }
 
+.adress {
+  margin-bottom: 15px;
+}
+
+.phone {
+  margin-bottom: 40px;
+}
+
+.contacts img {
+  vertical-align: bottom;
+}
+
+.footer-bottom {
+  display: flex;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .social-list {
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  margin-right: 140px;
   list-style: none;
 }
 
+.bonus {
+  width: 560px;
+}
+
 .bonus .title {
+  margin: 0;
+  margin-bottom: 10px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -221,17 +401,37 @@ a {
 }
 
 .bonus .description {
+  margin: 0;
   line-height: 22px;
 }
 
+.modal {
+  padding: 70px 100px 80px;
+  width: 960px;
+}
+
 .modal .title {
+  margin: 0;
+  margin-bottom: 45px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
   color: #000000;
 }
 
+.modal-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.modal-item {
+  width: 360px;
+}
+
 .modal label {
+  display: block;
+  margin-bottom: 10px;
   line-height: 18px;
   font-weight: 700;
   color: #000000;
@@ -239,6 +439,7 @@ a {
 
 .modal input,
 .modal textarea {
+  width: 100%;
   font: inherit;
   background-color: transparent;
   border: 2px solid #d7dcde;
@@ -261,6 +462,10 @@ a {
 .modal textarea:invalid {
   color: #e74246;
   border-color: #e74246;
+}
+
+.modal .button {
+  margin-top: 50px;
 }
 
 .main-title {
