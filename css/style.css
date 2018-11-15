@@ -1,7 +1,7 @@
 /* Обводка */
-* {
+/* * {
     outline: 2px solid lightblue;
-}
+} */
 /* Обводка */
 
 html {
@@ -38,6 +38,7 @@ a {
 
 .button {
   display: block;
+  width: 100%;
   font: inherit;
   font-weight: 500;
   line-height: 18px;
@@ -62,14 +63,17 @@ a {
 
 .main-header {
   display: flex;
-  margin-bottom: 30px;
+  padding-top: 45px;
+  padding-bottom: 80px;
   justify-content: space-between;
   background-color: #eeeeee;
 }
+
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .main-navigation {
@@ -437,6 +441,10 @@ a {
   color: #000000;
 }
 
+.modal-text {
+  width: 760px;
+}
+
 .modal input,
 .modal textarea {
   width: 100%;
@@ -468,12 +476,34 @@ a {
   margin-top: 50px;
 }
 
+.wrapper {
+  padding-bottom: 1px;
+  background-color: #eeeeee;
+}
+
 .main-title {
+  margin: 0;
+  margin-bottom: 109px;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
-  background-color: #eeeeee;
+  text-align: center;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 55px;
+  padding-bottom: 60px;
+}
+
+.filter {
+  width: 260px;
+}
+
+.catalog-wrapper {
+  width: 760px;
 }
 
 .price-controls label,
@@ -488,45 +518,106 @@ a {
 }
 
 .filter-title {
+  margin: 0;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.layot,
+.value .filter-title {
+  margin-bottom: 50px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.min-price,
+.max-price {
+  display: flex;
+  width: 115px;
+}
+
+.price-controls label {
+  margin-right: 10px;
+}
+
+.price-controls input {
+  width: 80px;
+}
+
+.layout,
 .features {
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
   border: none;
 }
 
 .filter-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.layout .filter-title,
+.features .filter-title {
+  margin-bottom: 20px;
+}
+
+.filter-list .item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .filter-list label {
   line-height: 20px;
 }
 
-.filter-form .button {
+.filter-form .button,
+.next-page {
   color: #000000;
   background-color: #eeeeee;
 }
 
 .filter-form .button:hover,
-.filter-form .button:focus {
+.next-page:hover,
+.filter-form .button:focus,
+.next-page:focus {
   background-color: #dfdfdf;
 }
 
-.filter-form .button:active {
+.filter-form .button:active,
+.next-page:active {
   background-color: #d5d5d5;
   box-shadow: inset 0 3px rgba(0, 0, 0, 0.1);
 }
 
+.sort {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.sort .filter-title {
+  width: 160px;
+  margin-right: 240px;
+}
+
 .sort-list {
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+  width: 280px;
   font-size: 14px;
   line-height: 18px;
   list-style: none;
   text-transform: uppercase;
+}
+
+.changer {
+  width: 60px;
 }
 
 .sort-list a {
@@ -547,7 +638,40 @@ a {
   color: #000000;
 }
 
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-list .item {
+  margin-right: 40px;
+  margin-bottom: 30px;
+  width: 360px;
+}
+
+.catalog-list .item:nth-child(even) {
+  margin-right: 0;
+}
+
+.catalog-cart {
+  width: 360px;
+  height: 576px;
+}
+
+.popup {
+  padding: 30px 60px 45px;
+  width: 360px;
+  text-align: center;
+  background-color: #eeeeee;
+}
+
 .popup .title {
+  margin: 0;
+  margin-bottom: 25px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -561,5 +685,29 @@ a {
 }
 
 .popup .description {
+  margin: 0;
+  margin-bottom: 30px;
   line-height: 18px;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination-list .item {
+  margin-right: 10px;
+  width: 50px;
+}
+
+.next-page {
+  width: 265px;
 }
