@@ -63,9 +63,10 @@ a {
 
 .main-header {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding-top: 45px;
   padding-bottom: 80px;
-  justify-content: space-between;
   background-color: #eeeeee;
 }
 
@@ -78,6 +79,7 @@ a {
 
 .main-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 800px;
   line-height: 30px;
