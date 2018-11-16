@@ -57,10 +57,10 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-
 .button {
   display: block;
-  width: 100%;
+  width: 240px;
+  padding: 15px 0;
   font: inherit;
   font-weight: 500;
   line-height: 18px;
@@ -70,7 +70,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   background-color: #fb565a;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .button:hover,
@@ -83,6 +83,10 @@ input[type="radio"].visually-hidden {
   background-color: #d7373b;
 }
 
+.wrapper-header {
+  background-color: #eeeeee;
+}
+
 .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,8 +95,6 @@ input[type="radio"].visually-hidden {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 48px;
-  padding-bottom: 80px;
-  background-color: #eeeeee;
 }
 
 .container {
@@ -227,9 +229,13 @@ input[type="radio"].visually-hidden {
   width: 90%;
 }
 
-.sliders {
-  margin-bottom: 80px;
+.wrapper-sliders {
   background-color: #eeeeee;
+}
+
+.sliders {
+  position: relative;
+  padding-top:
 }
 
 .sliders-list,
@@ -239,14 +245,31 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.sliders-list {
-  display: flex;
-  overflow: hidden;
+.sliders-list .item {
+  display: none;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-.sliders-list .item {
-  width: 1160px;
-  flex-shrink: 0;
+.sliders-list .item:first-child {
+  display: block;
+  background-image: url("../img/slide1.png");
+  background-repeat: no-repeat;
+  background-position: 93% 18px;
+}
+
+.sliders-list .item:nth-child(2) {
+  /* display: block; */
+  background-image: url("../img/slide2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 24px;
+}
+
+.sliders-list .item:nth-child(3) {
+  /* display: block; */
+  background-image: url("../img/slide3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
 }
 
 .sliders-list .title {
@@ -259,12 +282,57 @@ input[type="radio"].visually-hidden {
 }
 
 .sliders-list .description {
+  max-width: 400px;
   margin: 0;
   margin-bottom: 40px;
 }
 
-.sliders .button  {
-  margin-bottom: 80px;
+.switch-list {
+  position: absolute;
+  left: 50%;
+  bottom: 104px;
+  z-index: 100;
+  width: 160px;
+  height: 18px;
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.switch-list .item {
+  position: relative;
+  display: inline-block;
+  padding: 18px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.switch-list .item::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.switch-list .item-active::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 8px;
+  height: 8px;
+  margin: -5px;
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
 }
 
 .offers,

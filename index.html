@@ -19,65 +19,69 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="main-header container">
-    <a class="main-logo">
-      <img src="img/logo.svg" width="160" height="65" alt="Логотип студии Нёрдс">
-    </a>
-    <nav class="main-navigation">
-      <ul class="site-navigation">
-        <li class="item"><a href="studio.html">Студия</a></li>
-        <li class="item"><a href="clients.html">Клиенты</a></li>
-        <li class="item"><a href="catalog.html">Магазин</a></li>
-        <li class="item"><a href="contacts.html">Контакты</a></li>
-      </ul>
-      <ul class="user-navigation">
-        <li class="item">
-          <a href="cart.html">
-            <span class="cart-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
-            </span>
-            Корзина</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <header class="wrapper-header">
+    <div class="main-header container">
+      <a class="main-logo">
+        <img src="img/logo.svg" width="160" height="65" alt="Логотип студии Нёрдс">
+      </a>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li class="item"><a href="studio.html">Студия</a></li>
+          <li class="item"><a href="clients.html">Клиенты</a></li>
+          <li class="item"><a href="catalog.html">Магазин</a></li>
+          <li class="item"><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li class="item">
+            <a href="cart.html">
+              <span class="cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+              </span>
+              Корзина</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 
-  <main class="container">
+  <main>
     <h1 class="visually-hidden">Нёрдс - дизайн-студия из Краснодара</h1>
-    <section class="sliders">
-      <h2 class="visually-hidden">Преимущества</h2>
-      <ul class="sliders-list">
-        <li class="item">
-          <h3 class="title">Долго, дорого,<br> скрупулезно.</h3>
-          <p class="description">Математически выверенный дизайн<br>
-             для вашего сайта или мобильного приложения.</p>
-          <a class="button" href="studio.html">Узнать больше</a>
-        </li>
-        <li class="item">
-          <h3 class="title">Любим математику<br> как никто другой</h3>
-          <p class="description">Никакого креатива, только математические формулы<br>
-             для расчета идеальных пропорций.</p>
-          <a class="button" href="studio.html">Узнать больше</a>
-        </li>
-        <li class="item">
-          <h3 class="title">Только ночь,<br> только хардкор</h3>
-          <p class="description">Работать днем, как все? Мы против этого.<br>
-             Ближе к полуночи работа только начинается.</p>
-          <a class="button" href="studio.html">Узнать больше</a>
-        </li>
-      </ul>
-      <ul class="switch-list">
-        <li class="item">
-          <button class="visually-hidden type="button">Первый слайдер</button>
-        </li>
-        <li class="item">
-          <button class="visually-hidden type="button">Второй слайдер</button>
-        </li>
-        <li class="item">
-          <button class="visually-hidden type="button">Третий слайдер</button>
-        </li>
-      </ul>
-    </section>
+    <div class="wrapper-sliders">
+      <section class="sliders container">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="sliders-list">
+          <li class="item">
+            <h3 class="title">Долго, дорого,<br> скрупулезно.</h3>
+            <p class="description">Математически выверенный дизайн<br>
+               для вашего сайта или мобильного приложения.</p>
+            <a class="button" href="studio.html">Узнать больше</a>
+          </li>
+          <li class="item">
+            <h3 class="title">Любим математику<br> как никто другой</h3>
+            <p class="description">Никакого креатива, только математические формулы<br>
+               для расчета идеальных пропорций.</p>
+            <a class="button" href="studio.html">Узнать больше</a>
+          </li>
+          <li class="item">
+            <h3 class="title">Только ночь,<br> только хардкор</h3>
+            <p class="description">Работать днем, как все? Мы против этого.<br>
+               Ближе к полуночи работа только начинается.</p>
+            <a class="button" href="studio.html">Узнать больше</a>
+          </li>
+        </ul>
+        <ul class="switch-list">
+          <li class="item item-active">
+            <button class="visually-hidden" type="button">Первый слайдер</button>
+          </li>
+          <li class="item">
+            <button class="visually-hidden" type="button">Второй слайдер</button>
+          </li>
+          <li class="item">
+            <button class="visually-hidden" type="button">Третий слайдер</button>
+          </li>
+        </ul>
+      </section>
+    </div>
 
     <section class="offers">
       <h2 class="visually-hidden">Мы предлагаем</h2>
