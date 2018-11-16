@@ -3,6 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Каталог</title>
+  <!-- Pixel Glass -->
+  <style>
+    html {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      background-image: url("preview/nerds-catalog.jpg");
+    }
+  </style>
+  <link href="node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="node_modules/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -21,7 +32,11 @@
       </ul>
       <ul class="user-navigation">
         <li class="item">
-          <a href="cart.html">Корзина</a>
+          <a href="cart.html">
+            <span class="cart-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+            </span>
+            Корзина</a>
         </li>
       </ul>
     </nav>

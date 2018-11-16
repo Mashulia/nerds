@@ -36,6 +36,28 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 .button {
   display: block;
   width: 100%;
@@ -62,10 +84,13 @@ a {
 }
 
 .main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 45px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 48px;
   padding-bottom: 80px;
   background-color: #eeeeee;
 }
@@ -78,9 +103,14 @@ a {
 }
 
 .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 800px;
   line-height: 30px;
   font-weight: 500;
@@ -93,8 +123,21 @@ a {
   height: 65px;
 }
 
+.main-logo:hover {
+  opacity: 0.8;
+}
+
+.main-logo:active {
+  opacity: 0.3;
+}
+
 .site-navigation,
 .user-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -104,11 +147,50 @@ a {
   width: 440px;
 }
 
+.site-navigation .item {
+  position: relative;
+  margin-right: 20px;
+  width: 100px;
+  text-align: center;
+}
+
+.site-navigation .item:nth-child(4n+1) {
+  margin-right: 0;
+  text-align: left;
+}
+
+.site-navigation .item:nth-child(4n){
+  margin-right: 0;
+  text-align: right;
+}
+
 .user-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 160px;
 }
 
+.user-navigation .item {
+  position: relative;
+  padding-left: 50px;
+}
+
+.cart-icon {
+  position: absolute;
+  top: 31px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  fill: #a6a6a6;
+}
+
 .main-navigation a {
+  display: block;
+  padding-top: 28px;
   color: #000000;
 }
 
@@ -121,10 +203,28 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation .item-current,
-.user-navigation .item-current {
-  color: #000000;
-  border-bottom: 2px solid #fb565a;
+.item-current::after {
+  content: "";
+  position: absolute;
+  left: 13%;
+  right: 12%;
+  bottom: 0;
+  width: 75%;
+  height: 2px;
+  background-color: #fb565a;
+}
+
+.site-navigation .item:nth-child(4n+1)::after {
+  left: 0;
+  right: 30%;
+  width: 70%;
+}
+
+.site-navigation .item:nth-child(4n)::after,
+.user-navigation .item-current::after {
+  left: 10%;
+  right: 0;
+  width: 90%;
 }
 
 .sliders {
@@ -627,18 +727,22 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.sort-list a:not(.item-current a):hover,
-.sort-list a:not(.item-current a):focus {
+.sort-list a:hover,
+.sort-list a:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.sort-list a:not(.item-current a):active {
+.sort-list a:active {
   color: #000000;
 }
 
-.item-current a {
-  color: #000000;
-}
+.item-current a,
+.item-current a:hover,
+.item-current a:active,
+.item-current a:link {
+    color: #000000;
+    cursor: default;
+  }
 
 .catalog-list {
   display: flex;
