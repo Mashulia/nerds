@@ -788,13 +788,13 @@ input[type="radio"].visually-hidden {
 }
 
 .wrapper {
-  padding-bottom: 1px;
   background-color: #eeeeee;
 }
 
 .main-title {
   margin: 0;
-  margin-bottom: 109px;
+  padding-top: 80px;
+  padding-bottom: 109px;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
@@ -805,27 +805,25 @@ input[type="radio"].visually-hidden {
 .columns {
   display: flex;
   justify-content: space-between;
-  padding-top: 55px;
   padding-bottom: 60px;
 }
 
-.filter {
+.filter-form {
+  padding-top: 53px;
   width: 260px;
 }
 
-.catalog-wrapper {
-  width: 760px;
+.value,
+.layout,
+.features {
+  margin: 0;
+  margin-bottom: 55px;
+  padding: 0;
+  border: none;
 }
 
-.price-controls label,
-.price-controls input {
-  line-height: 22px;
-  text-transform: uppercase;
-}
-
-.price-controls input {
-  color: #283136;
-  background-color: #eeeeee;
+.value {
+  margin-bottom: 55px;
 }
 
 .filter-title {
@@ -837,35 +835,84 @@ input[type="radio"].visually-hidden {
 }
 
 .value .filter-title {
-  margin-bottom: 50px;
+  margin-bottom: 49px;
 }
+
+.range-controls {
+  position: relative;
+  margin-bottom: 15px;
+  padding: 39px 20px;
+  width: 260px;
+  height: 80px;
+  background-color: #eeeeee;
+  border-radius: 3px;
+}
+
+.scale {
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.toggle {
+  position: absolute;
+  top: 31px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle-min {
+  left: 18px;
+}
+
+.toggle-max {
+  left: 160px;
+}
+
 
 .price-controls {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
-}
-
-.min-price,
-.max-price {
-  display: flex;
-  width: 115px;
+  font-size: 0;
 }
 
 .price-controls label {
-  margin-right: 10px;
+  display: inline-block;
+  width: 50%;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
 }
 
 .price-controls input {
+  margin-left: 10px;
   width: 80px;
+  padding: 6px 10px;
+  text-align: center;
+  font: inherit;
+  color: #283136;
+  background-color: #eeeeee;
+  border-radius: 3px;
+  border: none;
 }
 
-.layout,
-.features {
-  margin: 0;
-  margin-bottom: 45px;
-  padding: 0;
-  border: none;
+.max-price {
+  text-align: right;
+}
+
+.catalog-wrapper {
+  width: 760px;
 }
 
 .filter-list {
@@ -951,6 +998,10 @@ input[type="radio"].visually-hidden {
 .item-current a:link {
     color: #000000;
     cursor: default;
+  }
+
+.sort-list .item-current::after {
+    background-color: transparent;
   }
 
 .catalog-list {

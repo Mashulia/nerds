@@ -19,102 +19,103 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="main-header container">
-    <a class="main-logo" href="index.html">
-      <img src="img/logo.svg" width="160" height="65" alt="Логотип студии Нёрдс">
-    </a>
-    <nav class="main-navigation">
-      <ul class="site-navigation">
-        <li class="item"><a href="studio.html">Студия</a></li>
-        <li class="item"><a href="clients.html">Клиенты</a></li>
-        <li class="item item-current"><a href="catalog.html">Магазин</a></li>
-        <li class="item"><a href="contacts.html">Контакты</a></li>
-      </ul>
-      <ul class="user-navigation">
-        <li class="item">
-          <a href="cart.html">
-            <span class="cart-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
-            </span>
-            Корзина</a>
-        </li>
-      </ul>
-    </nav>
+  <header class="wrapper-header">
+    <div class="main-header container">
+      <a class="main-logo" href="index.html">
+        <img src="img/logo.svg" width="160" height="65" alt="Логотип студии Нёрдс">
+      </a>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li class="item"><a href="studio.html">Студия</a></li>
+          <li class="item"><a href="clients.html">Клиенты</a></li>
+          <li class="item item-current"><a href="catalog.html">Магазин</a></li>
+          <li class="item"><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li class="item">
+            <a href="cart.html">
+              <span class="cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+              </span>
+              Корзина</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div class="wrapper container">
+    <div class="wrapper">
       <h1 class="main-title">Магазин готовых шаблонов</h1>
   </div>
 
     <div class="columns container">
-      <section class="filter">
-        <h2 class="visually-hidden">Фильтр шаблонов</h2>
-        <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-          <div class="value">
-            <h3 class="filter-title">Стоимость:</h3>
+      <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="value">
+          <legend class="filter-title">Стоимость:</legend>
+          <div class="range-filter">
             <div class="range-controls">
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <div class="range-toggle range-toggle-min"></div>
-              <div class="range-toggle range-toggle-max"></div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
             </div>
-          <div class="price-controls">
-            <div class="min-price">
-              <label class="min-price" for="min-price">от</label>
+            <div class="price-controls">
+              <label class="min-price">от
               <input id="min-price" type="text" name="min-price" placeholder="0">
-            </div>
-            <div class="max-price">
-              <label class="max-price" for="max-price">до</label>
+              </label>
+              <label class="max-price">до
               <input id="max-price" type="text" name="max-price" placeholder="15 000">
+              </label>
             </div>
           </div>
-          <fieldset class="layout">
-            <legend class="filter-title">Сетка:</legend>
-            <ul class="filter-list">
-              <li class="item">
-                <input class="visually-hidden filter-input radio-input" id="adaptive-layout" type="radio" name="layout-group" value="adaptive" checked>
-                <label for="adaptive-layout">Адаптивная</label>
-              </li>
-              <li class="item">
-                <input class="visually-hidden filter-input radio-input" id="fix-layout" type="radio" name="layout-group" value="fix">
-                <label for="fix-layout">Фиксированная</label>
-              </li>
-              <li class="item">
-                <input class="visually-hidden filter-input radio-input" id="rubbery-layout" type="radio" name="layout-group" value="rubbery">
-                <label for="rubbery-layout">Резиновая</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="features">
-            <legend class="filter-title">Особенности:</legend>
-            <ul class="filter-list">
-              <li class="item">
-                <input class="visually-hidden filter-input checkbox-input" id="slider" type="checkbox" name="slider" checked>
-                <label for="slider">Слайдер</label>
-              </li>
-              <li class="item">
-                <input class="visually-hidden filter-input checkbox-input" id="features-block" type="checkbox" name="features-block">
-                <label for="features-block">Блок преимуществ</label>
-              </li>
-              <li class="item">
-                <input class="visually-hidden filter-input checkbox-input" id="news" type="checkbox" name="news" checked>
-                <label for="news">Новости</label>
-              </li>
-              <li class="item">
-                <input class="visually-hidden filter-input checkbox-input" id="gallery" type="checkbox" name="gallery">
-                <label for="gallery">Галерея</label>
-              </li>
-              <li class="item">
-                <input class="visually-hidden filter-input checkbox-input" id="cart" type="checkbox" name="cart">
-                <label for="cart">Корзина</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="button" type="submit">Показать</button>
-        </form>
-      </section>
+        </fieldset>
+
+        <fieldset class="layout">
+          <legend class="filter-title">Сетка:</legend>
+          <ul class="filter-list">
+            <li class="item">
+              <input class="visually-hidden filter-input radio-input" id="adaptive-layout" type="radio" name="layout-group" value="adaptive" checked>
+              <label for="adaptive-layout">Адаптивная</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input radio-input" id="fix-layout" type="radio" name="layout-group" value="fix">
+              <label for="fix-layout">Фиксированная</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input radio-input" id="rubbery-layout" type="radio" name="layout-group" value="rubbery">
+              <label for="rubbery-layout">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="features">
+          <legend class="filter-title">Особенности:</legend>
+          <ul class="filter-list">
+            <li class="item">
+              <input class="visually-hidden filter-input checkbox-input" id="slider" type="checkbox" name="slider" checked>
+              <label for="slider">Слайдер</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input checkbox-input" id="features-block" type="checkbox" name="features-block">
+              <label for="features-block">Блок преимуществ</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input checkbox-input" id="news" type="checkbox" name="news" checked>
+              <label for="news">Новости</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input checkbox-input" id="gallery" type="checkbox" name="gallery">
+              <label for="gallery">Галерея</label>
+            </li>
+            <li class="item">
+              <input class="visually-hidden filter-input checkbox-input" id="cart" type="checkbox" name="cart">
+              <label for="cart">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button" type="submit">Показать</button>
+      </form>
 
       <div class="catalog-wrapper">
         <section class="sort">
@@ -197,34 +198,39 @@
     </div>
   </main>
 
-<footer class="main-footer">
-    <section class="contacts">
-      <h2 class="visually-hidden">Наши контакты</h2>
+  <footer class="main-footer">
+    <section class="contacts container">
       <div class="contacts-info">
-        <h3 class="title">Nёrds design studio</h3>
+        <h2 class="title">Nёrds design studio</h2>
         <p class="adress">191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8</p>
-        <p class="phone">тел. +7(812)275-75-75</p>
+        <p class="phone">тел. +7 (812) 275-75-75</p>
         <a class="button" href="write-us.html">Напишите нам</a>
       </div>
-      <img src="img/map.png" width="1440" height="415" alt="Мы на карте">
     </section>
+
+    <div class="map">
+      <img src="img/map.png" width="1440" height="415" alt="Мы на карте">
+    </div>
 
     <div class="footer-bottom container">
       <ul class="social-list">
         <li>
           <a class="social-button social-vk" href="#vk">
             <span class="visually-hidden">ВКонтакте</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="15"><path fill="#FFF" d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534 1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244 1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621 1.666-1.445 3.079-1.741 2.989-2.436 3.148-2.724 2.961-.661-.433-.494-1.737-.494-2.664 0-2.897.432-4.105-.846-4.417-.427-.104-.739-.172-1.828-.182-1.392-.021-2.574 0-3.244.329-.445.223-.786.712-.579.74.26.035.843.16 1.155.586.401.552.389 1.789.389 1.789s.229 3.411-.54 3.834c-.528.29-1.25-.302-2.803-3.016-.793-1.388-1.392-2.922-1.392-2.922s-.116-.285-.326-.441c-.25-.185-.6-.244-.6-.244L.848.684S.29.7.085.946c-.182.218-.015.668-.015.668s2.909 6.881 6.203 10.347c3.02 3.182 6.452 2.971 6.452 2.971h1.555s.469-.054.709-.312c.224-.24.214-.691.214-.691s-.031-2.109.935-2.419z"/></svg>
           </a>
         </li>
         <li>
           <a class="social-button social-fb" href="#fb">
             <span class="visually-hidden">Фейсбук</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22"><path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg>
           </a>
         </li>
         <li>
           <a class="social-button social-insta" href="#instagramm">
             <span class="visually-hidden">Инстаграмм</span>
+            <svg height="21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="M18 0H3C1.35 0 0 1.35 0 3v15c0 1.65 1.35 3 3 3h15c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zm-7.5 7c1.93 0 3.5 1.57 3.5 3.5S12.43 14 10.5 14 7 12.43 7 10.5 8.57 7 10.5 7zM18 18H3V9h1.181A6.504 6.504 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.45 6.45 0 0 0-.181-1.5H18zm0-11h-4V3h4z" fill="#fff"/></svg>
           </a>
         </li>
       </ul>
