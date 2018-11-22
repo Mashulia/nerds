@@ -211,7 +211,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   left: 13%;
   right: 12%;
-  bottom: 0;
+  bottom: 3px;
   width: 75%;
   height: 2px;
   background-color: #fb565a;
@@ -219,8 +219,8 @@ input[type="radio"].visually-hidden {
 
 .site-navigation .item:nth-child(4n+1)::after {
   left: 0;
-  right: 30%;
-  width: 70%;
+  right: 25%;
+  width: 75%;
 }
 
 .site-navigation .item:nth-child(4n)::after,
@@ -725,8 +725,57 @@ input[type="radio"].visually-hidden {
 }
 
 .modal {
+  display: none;
+  position: fixed;
+  bottom: 180px;
+  left: 50%;
+  z-index: 5;
+  margin-left: -480px;
   padding: 70px 100px 80px;
   width: 960px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+}
+
+.modal-close {
+  position: absolute;
+  top: 80px;
+  right: 90px;
+  width: 21px;
+  height: 21px;
+  font-size: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 21px;
+  height: 3px;
+  background-color: #fb565a;
+  opacity: 0.3;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close:hover::before,
+.modal-close:hover::after {
+  opacity: 1;
+}
+
+.modal-close:active::before,
+.modal-close:active::after {
+  opacity: 0.1;
 }
 
 .modal .title {
@@ -741,7 +790,7 @@ input[type="radio"].visually-hidden {
 .modal-group {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .modal-item {
@@ -762,12 +811,21 @@ input[type="radio"].visually-hidden {
 
 .modal input,
 .modal textarea {
+  padding: 10px 15px;
   width: 100%;
   font: inherit;
   background-color: transparent;
   border: 2px solid #d7dcde;
   color: #444444;
   opacity: 0.5;
+}
+
+.modal-text textarea {
+  min-height: 115px;
+}
+
+.modal-text {
+  margin-bottom: 45px;
 }
 
 .modal input:hover,
@@ -785,10 +843,6 @@ input[type="radio"].visually-hidden {
 .modal textarea:invalid {
   color: #e74246;
   border-color: #e74246;
-}
-
-.modal .button {
-  margin-top: 50px;
 }
 
 .wrapper {
@@ -1038,6 +1092,12 @@ input[type="radio"].visually-hidden {
 .filter-input:hover + label,
 .filter-input:focus + label {
   color: #000000;
+}
+
+.filter-input:focus + label::before {
+  outline: thin solid;
+  outline: 3px auto -webkit-focus-ring-color;
+  opacity: 1;
 }
 
 .features {
