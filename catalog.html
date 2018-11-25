@@ -28,7 +28,7 @@
         <ul class="site-navigation">
           <li class="item"><a href="studio.html">Студия</a></li>
           <li class="item"><a href="clients.html">Клиенты</a></li>
-          <li class="item item-current"><a href="catalog.html">Магазин</a></li>
+          <li class="item item-current"><a>Магазин</a></li>
           <li class="item"><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
@@ -209,12 +209,15 @@
         <p class="adress">191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8</p>
         <p class="phone">тел. +7 (812) 275-75-75</p>
-        <a class="button" href="write-us.html">Напишите нам</a>
+        <a class="button contacts-button" href="write-us.html">Напишите нам</a>
       </div>
     </section>
 
     <div class="map">
-      <img src="img/map.png" width="1440" height="415" alt="Мы на карте">
+      <iframe src="https://yandex.ru/map-widget/v1/-/CBFRR8xP8D" width="1440" height="415" allowfullscreen="true"></iframe>
+      <p>
+        <img src="img/map.png" width="1440" height="416" alt="Мы на карте">
+      </p>
     </div>
 
     <div class="footer-bottom container">
@@ -251,11 +254,11 @@
       <div class="modal-group">
         <div class="modal-item">
           <label for="modal-name">Ваше имя:</label>
-          <input id="modal-name" type="text" name="name" placeholder="Имя Фамилия">
+          <input id="modal-name" type="text" name="login" placeholder="Имя Фамилия" required>
         </div>
         <div class="modal-item">
           <label for="modal-email">Ваш e-mail:</label>
-          <input id="modal-email" type="email" name="email" placeholder="email@example.com">
+          <input id="modal-email" type="email" name="email" placeholder="email@example.com" required>
         </div>
       </div>
       <div class="modal-item modal-text">
@@ -264,9 +267,9 @@
       </div>
       <button class="button" type="submit">Отправить</button>
     </form>
-    <button type="button">Закрыть попап</button>
+    <button class="modal-close" type="button">Закрыть попап</button>
   </section>
-m
+
   <script src="js/file.js"></script>
 </body>
 </html>

@@ -50,36 +50,55 @@
       <section class="sliders container">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="sliders-list">
-          <li class="item">
+          <li class="sliders-item slider-1">
             <h3 class="title">Долго, дорого,<br> скрупулезно.</h3>
             <p class="description">Математически выверенный дизайн<br>
                для вашего сайта или мобильного приложения.</p>
             <a class="button" href="studio.html">Узнать больше</a>
           </li>
-          <li class="item">
+          <li class="sliders-item slider-2">
             <h3 class="title">Любим математику<br> как никто другой</h3>
             <p class="description">Никакого креатива, только математические формулы<br>
                для расчета идеальных пропорций.</p>
             <a class="button" href="studio.html">Узнать больше</a>
           </li>
-          <li class="item">
+          <li class="sliders-item slider-3">
             <h3 class="title">Только ночь,<br> только хардкор</h3>
             <p class="description">Работать днем, как все? Мы против этого.<br>
                Ближе к полуночи работа только начинается.</p>
             <a class="button" href="studio.html">Узнать больше</a>
           </li>
         </ul>
-        <ul class="switch-list">
-          <li class="item item-active">
-            <button class="visually-hidden" type="button">Первый слайдер</button>
+        <div class="nav-links">
+          <ul>
+            <li class="item-links active-links" data-pos="0px">
+            </li>
+            <li class="item-links" data-pos="-1200px">
+            </li>
+            <li class="item-links" data-pos="-2400px">
+            </li>
+          </ul>
+        </div>
+        <!-- <ul class="switch-list">
+          <li class="item">
+          <input class="visually-hidden switch-input" id="switch-1" type="radio" name="switch" value="switch-1" checked>
+          <label class="ring" for="switch-1" data-pos="0px">
+            <span class="visually-hidden">Первый слайдер</span>
+          </label>
           </li>
           <li class="item">
-            <button class="visually-hidden" type="button">Второй слайдер</button>
+            <input class="visually-hidden switch-input" id="switch-2" type="radio" name="switch" value="switch-2">
+            <label class="ring" for="switch-2" data-pos="-1200px">
+              <span class="visually-hidden">Второй слайдер</span>
+            </label>
           </li>
           <li class="item">
-            <button class="visually-hidden" type="button">Третий слайдер</button>
+            <input class="visually-hidden switch-input" id="switch-3" type="radio" name="switch" value="switch-3">
+            <label class="ring" for="switch-3" data-pos="-2400px">
+              <span class="visually-hidden">Третий слайдер</span>
+            </label>
           </li>
-        </ul>
+        </ul> -->
       </section>
     </div>
 
@@ -169,12 +188,15 @@
         <p class="adress">191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8</p>
         <p class="phone">тел. +7 (812) 275-75-75</p>
-        <a class="button" href="write-us.html">Напишите нам</a>
+        <a class="button contacts-button" href="write-us.html">Напишите нам</a>
       </div>
     </section>
 
     <div class="map">
-      <img src="img/map.png" width="1440" height="415" alt="Мы на карте">
+      <iframe src="https://yandex.ru/map-widget/v1/-/CBFRR8xP8D" width="1440" height="416" allowfullscreen="true"></iframe>
+      <p>
+        <img src="img/map.png" width="1440" height="416" alt="Мы на карте">
+      </p>
     </div>
 
     <div class="footer-bottom container">
@@ -211,7 +233,7 @@
       <div class="modal-group">
         <div class="modal-item">
           <label for="modal-name">Ваше имя:</label>
-          <input id="modal-name" type="text" name="name" placeholder="Имя Фамилия">
+          <input id="modal-name" type="text" name="login" placeholder="Имя Фамилия">
         </div>
         <div class="modal-item">
           <label for="modal-email">Ваш e-mail:</label>
@@ -224,7 +246,7 @@
       </div>
       <button class="button" type="submit">Отправить</button>
     </form>
-    <button type="button">Закрыть попап</button>
+    <button class="modal-close" type="button">Закрыть попап</button>
   </section>
 
   <script src="js/file.js"></script>
