@@ -662,6 +662,7 @@ input[type="radio"].visually-hidden {
   z-index: 1;
   margin: 0;
   vertical-align: bottom;
+  width: 100%;
 }
 
 .map {
@@ -673,6 +674,11 @@ input[type="radio"].visually-hidden {
   position: absolute;
   z-index: 2;
   border: none;
+  width: 100%;
+}
+
+.map img {
+  width: 100%;
 }
 
 .contacts .button {
